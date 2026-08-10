@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You by GN traders | Groceries & online deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <div class="logo-icon"><img src="logo.jpeg" alt="logo"></div>
+                <div class="logo-text">
+                    <h1>For You</h1>
+                    <span id="block-span">By GN Traders</span>
+                    <span>LOCAL GROCERY & BEST ONLINE DEALS</span>
+                </div>
+            </a>
+
+            <!-- Universal Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search Grocery, Fashion, Electronics...">
+                <button id="searchBtn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grocery.html">Grocery</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="#order">Bulk Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <section id="products" class="product-category">
+        <div class="category-container">
+            <h1>Our Products & Recommended Deals</h1>
+            <p class="section-subtitle">Local Grocery ke liye <b>Order on WhatsApp</b> karein
+
+                <!-- GROCERY SECTION (LOCAL WHATSAPP ORDERS) -->
+            <div class="category-block" id="grocery">
+                <h2><i class="fa-solid fa-leaf"></i> LOCAL GROCERY (सब्ज़ी, फल, चावल)</h2>
+
+                <!-- VEGETABLES -->
+                <h3 class="subcategory-title"><i class="fa-solid fa-carrot"></i> Vegetables (सब्ज़ी)</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Shimla Mirch" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="Shimla.webp" alt="Shimla Mirch">
+                        <h3>Shimla Mirch</h3>
+                        <p class="price">₹60 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Shimla Mirch', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Coriander (धनिया)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="dhana.jpg" alt="Coriander">
+                        <h3>Coriander (धनिया)</h3>
+                        <p class="price">₹50 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Coriander (धनिया)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Hari Mirch" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="mirchiG4.png" alt="Hari Mirch">
+                        <h3>Mirch (मिर्च)</h3>
+                        <p class="price">₹35 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Hari Mirch', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Spinach (पालक)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="palak.jpg" alt="Palak">
+                        <h3>Spinach (पालक)</h3>
+                        <p class="price">₹20 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Spinach (पालक)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Cauliflower (फूलगोभी)"
+                                data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="fulgobi.jpg" alt="Cauliflower (फूलगोभी)">
+                        <h3>Cauliflower (फूलगोभी)</h3>
+                        <p class="price">₹60 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Cauliflower (फूलगोभी)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Cabbage (पत्तागोभी)"
+                                data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="pattagobi.jpeg" alt="Cabbage (पत्तागोभी)">
+                        <h3>Cabbage (पत्तागोभी)</h3>
+                        <p class="price">₹60 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Cabbage (पत्तागोभी)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Potato (आलू)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="aalu.webp" alt="Potato (आलू)">
+                        <h3>Potato (आलू)</h3>
+                        <p class="price">₹20 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Potato (आलू)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Onion (प्याज)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="pyaj.jpg" alt="Onion (प्याज)">
+                        <h3>Onion (प्याज)</h3>
+                        <p class="price">₹20 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Onion (प्याज)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Garlic (लहसुन)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="lahsun.jpg" alt="Garlic (लहसुन)">
+                        <h3>Garlic (लहसुन)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Garlic (लहसुन)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Green Peas (मटर)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="matar.jpg" alt="Green Peas (मटर)">
+                        <h3>Green Peas (मटर)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Green Peas (मटर)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Carrot (गाजर)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="carrot.jpg" alt="Carrot (गाजर)">
+                        <h3>Carrot (गाजर)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Carrot (गाजर)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Pumpkin (कद्दू)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="pumpkin.webp" alt="Pumpkin (कद्दू)">
+                        <h3>Pumpkin (कद्दू)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Pumpkin (कद्दू)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Brinjal (बैंगन)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="bengun.jpg" alt="Brinjal (बैंगन)">
+                        <h3>Brinjal (बैंगन)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Brinjal (बैंगन)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Tomato (टमाटर)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="tamatar.jpg" alt="Tomato (टमाटर)">
+                        <h3>Tomato (टमाटर)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Tomato (टमाटर)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <!-- Corn (मक्का) -->
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Corn (मक्का)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="corn.jpeg" alt="Corn (मक्का)">
+                        <h3>Corn (मक्का)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Corn (मक्का)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Lady Finger (भिंडी)"
+                                data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="bhindi.jpg" alt="Lady Finger (भिंडी)">
+                        <h3>Lady Finger (भिंडी)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Lady Finger (भिंडी)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Cucumber (खीरा)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="khira.webp" alt="Cucumber (खीरा)">
+                        <h3>Cucumber (खीरा)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Cucumber (खीरा)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Lemon (नींबू)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="lemon.jpg" alt="Lemon (नींबू)">
+                        <h3>Lemon (नींबू)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Lemon (नींबू)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Sponge Gourd (गिलकी)"
+                                data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="gilki.jpg" alt="Sponge Gourd (गिलकी)">
+                        <h3>Sponge Gourd (गिलकी)</h3>
+                        <p class="price">₹25 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Sponge Gourd (गिलकी)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Ridge Gourd (तुरई)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="turai.webp" alt="Ridge Gourd (तुरई)">
+                        <h3>Ridge Gourd (तुरई)</h3>
+                        <p class="price">₹25 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Ridge Gourd (तुरई)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- FRUITS -->
+                <h3 class="subcategory-title" style="margin-top:24px;"><i class="fa-solid fa-bowl-rice"></i> Fruits
+                </h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Apple (सेब)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="apple.webp" alt="Apple">
+                        <h3>Apple <br>(सेब)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Apple (सेब)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Badam-Mango (बादाम आम)"
+                                data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="badam-mango.jpg" alt="badam-Mango">
+                        <h3>Badam-Mango (बादाम आम)</h3>
+                        <p class="price">₹50 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Badam-Mango (बादाम आम)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Green Coconut (नारियल पानी)"
+                                data-unit="piece">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="Nariyal-pani.jpeg" alt="Green-coconut">
+                        <h3>Green Coconut (नारियल पानी)</h3>
+                        <p class="price">₹55 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="10" min="10">
+                            <span>piece</span>
+                        </div>
+                        <button class="btn-buy-single"
+                            onclick="sendSingleOrder(this, 'Green Coconut(नारियल पानी)', 'piece')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Banana(केला)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="banana-kela.jpg" alt="banana-kela">
+                        <h3>Banana <br> (केला)</h3>
+                        <p class="price">₹40 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Banana (केला)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Papaya(पपीता)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="papaya.jpg" alt="Papaya-पपीता">
+                        <h3>Papaya <br> (पपीता )</h3>
+                        <p class="price">₹40 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Papaya (पपीता)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Watermelon(तरबूज)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="tarbuj.jpg" alt="Tarbuj">
+                        <h3>Watermelon <br> (तरबूज)</h3>
+                        <p class="price">₹60 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Watermelon (तरबूज)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Mango(तोतापरी आम)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="totapari-aam.jpg" alt="Totapari-Mango">
+                        <h3>Mango <br> (तोतापरी आम)</h3>
+                        <p class="price">₹60 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Mango (तोतापरी आम)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Orange (संतरा)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="orange.webp" alt="Orange (संतरा)">
+                        <h3>Orange <br> (संतरा)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Orange (संतरा)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Grapes (अंगूर)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="grapes.jpg" alt="Grapes (अंगूर)">
+                        <h3>Grapes <br> (अंगूर)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Grapes (अंगूर)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Pomegranate (अनार)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="pomegranate.webp" alt="Pomegranate (अनार)">
+                        <h3>Pomegranate <br> (अनार)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Pomegranate (अनार)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Muskmelon (खरबूजा)" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="muskmelon.jpg" alt="Muskmelon (खरबूजा)">
+                        <h3>Muskmelon (खरबूजा)</h3>
+                        <p class="price">₹120 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="1" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Muskmelon (खरबूजा)', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <!-- Rice -->
+                <h3 class="subcategory-title" style="margin-top:24px;"><i class="fa-solid fa-bowl-rice"></i> Rice </h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="Basmati Rice" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="rice.jpg" alt="Basmati Rice">
+                        <h3>Basmati Rice <br>(चावल)</h3>
+                        <p class="price">₹85 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="10" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, 'Basmati Rice', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-card">
+                        <label class="select-checkbox" title="Select for Bulk Order">
+                            <input type="checkbox" class="product-select" data-name="1121-Basmati Rice" data-unit="kg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <img src="1121-rice.jpeg" alt="1121-Basmati Rice">
+                        <h3>1121 Basmati Rice (1121-चावल)</h3>
+                        <p class="price">₹110 / kg</p>
+                        <div class="qty-container">
+                            <label>Qty:</label>
+                            <input type="number" class="product-qty" value="10" min="1">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-buy-single" onclick="sendSingleOrder(this, '1121-Basmati Rice', 'kg')">
+                            <i class="fa-brands fa-whatsapp"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MULTI-ORDER ACTION BAR (GROCERY ONLY) -->
+            <div class="multi-order-bar">
+                <div class="order-counter">
+                    <span id="selectedCount">0</span> Items Selected
+                </div>
+                <button id="sendBulkOrderBtn" class="btn-whatsapp-bulk" onclick="sendMultiOrderWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> Order Selected Grocery Items on WhatsApp
+                </button>
+            </div>
+
+        </div>
+    </section>
+    <hr>
+
+    <!-- Clients Section -->
+    <section class="clients-section" id="clients">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Special B2B Clients</h2>
+                <p>In sabhi businesses ko hum regular bulk delivery provide karte hain</p>
+            </div>
+
+            <div class="clients-grid">
+                <div class="client-box">
+                    <i class="fa-solid fa-hotel"></i>
+                    <h4>Hotels & Restaurants</h4>
+                    <p>Daily Morning Fixed Time Supply</p>
+                </div>
+                <div class="client-box">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Wedding Caterers</h4>
+                    <p>Shaadi-Party Bulk Quantity Discounts</p>
+                </div>
+                <div class="client-box">
+                    <i class="fa-solid fa-glass-water"></i>
+                    <h4>Juice Corners</h4>
+                    <p>A-Grade Fruit Crates on Mandi Rate</p>
+                </div>
+                <div class="client-box">
+                    <i class="fa-solid fa-school"></i>
+                    <h4>Hostels & Mess</h4>
+                    <p>Monthly Credit & Tax Invoice Facility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <hr>
+    <br>
+    <section class="container" id="order">
+        <div class="order-card">
+            <div class="order-grid">
+                <div class="order-info">
+                    <h3>Send Order / Get Rate Quotation</h3>
+                    <p>Apni required items aur quantity bharein, direct humare WhatsApp par instant rate card payein!
+                    </p>
+
+                    <div class="feature-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div>
+                            <h4>Instant Price Quote</h4>
+                            <p>5 minutes mein Mandi Wholesale Rate reply</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck"></i>
+                        <div>
+                            <h4>Same Day Delivery</h4>
+                            <p>Banswara city aur nearby wedding grounds tak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label>Business / Client Name *</label>
+                        <input type="text" id="clientName" placeholder="e.g. Your Name (Royal Caterers)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Business Category *</label>
+                        <select id="businessType" required>
+                            <option value="Hotel / Restaurant">Hotel / Restaurant</option>
+                            <option value="Wedding Caterer">Wedding / Party Caterer</option>
+                            <option value="Hostel / Mess Supplier">Hostel / Mess Supplier</option>
+                            <option value="Retail Fruit/Veg Seller">Retail Shopkeeper</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>WhatsApp Phone Number *</label>
+                        <input type="tel" id="phoneNumber" placeholder="e.g. 9876543210" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Order Requirement & Quantity *</label>
+                        <textarea id="orderDetails"
+                            placeholder="e.g. 100kg Basmati Rice, 50kg Potato, 20kg Onion, 5 Crates Tomato..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div>
+                <h4 style="color: var(--accent-gold); margin-bottom: 15px;">ForYou <br> By GN Traders</h4>
+                <p style="color: #b7e4c7; font-size: 0.9rem;">Banswara ka trusted Fruits, Vegetables, Rice Supplier &
+                    Top Online Deals Partner.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--accent-gold); margin-bottom: 15px;">Address & Contact (For Local Grocery
+                    Delivery)</h4>
+                <p style="color: #b7e4c7; font-size: 0.9rem;"><i class="fa-solid fa-location-dot"></i> Sabji Mandi Kagdi
+                    Complex, Pala road, Banswara</p>
+                <p style="color: #b7e4c7; font-size: 0.9rem;"><i class="fa-solid fa-phone"></i> +91 9587716650</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 All-In-One Bazaar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- External javascript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
