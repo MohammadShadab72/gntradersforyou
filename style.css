@@ -1224,14 +1224,7 @@ footer {
    ONLY APPLY TO ELECTRONICS & FASHION PAGES (SCOPED CSS)
    ========================================================= */
 
-/* Card Setup */
-.amazon-style-page .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 15px;
-}
-
+/* Card Setup (Base) */
 .amazon-style-page .product-card {
     position: relative;
     border: 1px solid #e7e7e7;
@@ -1248,6 +1241,55 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* ---------------------------------------------------------
+   1. FASHION SECTION: 4 Cards Per Line + Horizontal Scroll
+   --------------------------------------------------------- */
+#fashion .product-grid {
+    display: flex;
+    flex-wrap: nowrap;          /* Scroll chalu rakhne ke liye line break nahi hone dega */
+    overflow-x: auto;           /* Horizontal scrollbar active karega */
+    gap: 20px;
+    padding: 15px 5px;
+    scroll-behavior: smooth;    /* Smooth scroll feel ke liye */
+}
+
+#fashion .product-card {
+    /* Formula: 25% width minus gap adjustment */
+    flex: 0 0 calc(25% - 15px); 
+    min-width: 240px;           /* Mobile layout crash hone se bachane ke liye */
+}
+
+/* Optional: Fashion Section Scrollbar Styling (Acha look dene ke liye) */
+#fashion .product-grid::-webkit-scrollbar {
+    height: 8px;
+}
+#fashion .product-grid::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+#fashion .product-grid::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* ---------------------------------------------------------
+   2. ELECTRONICS SECTION: 2 Cards Per Line (No Scroll)
+   --------------------------------------------------------- */
+#electronics .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Fixed 2 cards ek line me */
+    gap: 20px;
+    padding: 15px;
+    overflow-x: hidden;                    /* Scrollbar disabled */
+}
+
+#electronics .product-card {
+    width: 100%;                           /* Equal 50% width distribution */
+}
+
+
+/* ---------------------------------------------------------
+   3. INNER CARD CONTENT (BAAKI SABHI STYLES SAME HAIN)
+   --------------------------------------------------------- */
 .amazon-style-page .badge-tag {
     position: absolute;
     top: 10px;
@@ -1261,7 +1303,6 @@ footer {
     z-index: 2;
 }
 
-/* Gallery & Thumbnails */
 .amazon-style-page .media-container {
     text-align: center;
     margin-bottom: 12px;
@@ -1294,16 +1335,6 @@ footer {
     border-color: #e77600;
 }
 
-.amazon-style-page .video-thumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    color: #333;
-    font-size: 13px;
-}
-
-/* Amazon Style Content Typography */
 .amazon-style-page .brand-tag {
     font-size: 11px;
     color: #565959;
@@ -1377,7 +1408,6 @@ footer {
     margin-bottom: 12px;
 }
 
-/* Buy Button Override */
 .amazon-style-page .btn-affiliate-buy {
     display: block;
     width: 100%;
@@ -1396,3 +1426,14 @@ footer {
     background: #f7ca00;
 }
 
+/* ---------------------------------------------------------
+   4. MOBILE RESPONSIVENESS (Optional & Recommended)
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+    #electronics .product-grid {
+        grid-template-columns: 1fr; 
+    }
+    #fashion .product-card {
+        flex: 0 0 75%;              
+    }
+}
