@@ -1220,220 +1220,147 @@ footer {
     }
 }
 
-/* =========================================================
-   ONLY APPLY TO ELECTRONICS & FASHION PAGES (SCOPED CSS)
-   ========================================================= */
-
-/* Card Setup (Base) */
-.amazon-style-page .product-card {
-    position: relative;
-    border: 1px solid #e7e7e7;
-    border-radius: 8px;
-    background: #fff;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: box-shadow 0.2s ease-in-out;
+/* only apply for fashion and electronics */
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.amazon-style-page .product-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+.product-page {
+  padding: 30px 15px;
 }
 
-/* ---------------------------------------------------------
-   1. FASHION SECTION: 4 Cards Per Line + Horizontal Scroll
-   --------------------------------------------------------- */
-#fashion .product-grid {
-    display: flex;
-    flex-wrap: nowrap;          /* Scroll chalu rakhne ke liye line break nahi hone dega */
-    overflow-x: auto;           /* Horizontal scrollbar active karega */
-    gap: 20px;
-    padding: 15px 5px;
-    scroll-behavior: smooth;    /* Smooth scroll feel ke liye */
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-#fashion .product-card {
-    /* Formula: 25% width minus gap adjustment */
-    flex: 0 0 calc(25% - 15px); 
-    min-width: 240px;           /* Mobile layout crash hone se bachane ke liye */
+.page-title h1 {
+  font-size: 2rem;
+  color: #222;
 }
 
-/* Optional: Fashion Section Scrollbar Styling (Acha look dene ke liye) */
-#fashion .product-grid::-webkit-scrollbar {
-    height: 8px;
-}
-#fashion .product-grid::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
-}
-#fashion .product-grid::-webkit-scrollbar-thumb:hover {
-    background: #999;
+.page-title p {
+  color: #666;
 }
 
-/* ---------------------------------------------------------
-   2. ELECTRONICS SECTION: 2 Cards Per Line (No Scroll)
-   --------------------------------------------------------- */
-#electronics .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Fixed 2 cards ek line me */
-    gap: 20px;
-    padding: 15px;
-    overflow-x: hidden;                    /* Scrollbar disabled */
+/* Product Grid System (Maintainable & Responsive) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
 }
 
-#electronics .product-card {
-    width: 100%;                           /* Equal 50% width distribution */
+/* Product Card Styling */
+.product-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-
-/* ---------------------------------------------------------
-   3. INNER CARD CONTENT (BAAKI SABHI STYLES SAME HAIN)
-   --------------------------------------------------------- */
-.amazon-style-page .badge-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #cc0c39;
-    color: #fff;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 3px;
-    z-index: 2;
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.amazon-style-page .media-container {
-    text-align: center;
-    margin-bottom: 12px;
+.product-img {
+  width: 100%;
+  height: 220px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.amazon-style-page .main-media {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: 10px;
+.product-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
 }
 
-.amazon-style-page .thumbnail-list {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.amazon-style-page .thumb {
-    width: 38px;
-    height: 38px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
+.product-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-.amazon-style-page .thumb:hover, 
-.amazon-style-page .thumb.active {
-    border-color: #e77600;
+.product-info .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
 }
 
-.amazon-style-page .brand-tag {
-    font-size: 11px;
-    color: #565959;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
+.buy-btn {
+  display: block;
+  text-align: center;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
 }
 
-.amazon-style-page .product-title {
-    font-size: 14px;
-    line-height: 1.3em;
-    height: 2.6em;
-    overflow: hidden;
-    color: #0f1111;
-    margin: 4px 0 6px 0;
-    font-weight: 500;
+.buy-btn:hover {
+  background-color: #ddb347;
 }
 
-.amazon-style-page .rating-block {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    margin-bottom: 6px;
+/* Footer Styling */
+.site-footer {
+  background-color: #131921;
+  color: #fff;
+  margin-top: 50px;
+  padding-top: 30px;
 }
 
-.amazon-style-page .stars {
-    color: #ffa41c;
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
-.amazon-style-page .rating-count {
-    color: #007185;
+.footer-about h4 {
+  margin-bottom: 8px;
+  color: #febd69;
 }
 
-.amazon-style-page .price-container {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
+.footer-disclosure {
+  max-width: 450px;
 }
 
-.amazon-style-page .discount-badge {
-    color: #cc0c39;
-    font-size: 20px;
-    font-weight: 300;
+.affiliate-note {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 4px;
 }
 
-.amazon-style-page .price {
-    font-size: 24px;
-    font-weight: 500;
-    color: #0f1111;
-}
-
-.amazon-style-page .currency {
-    font-size: 13px;
-    vertical-align: super;
-}
-
-.amazon-style-page .mrp-line {
-    font-size: 12px;
-    color: #565959;
-    margin: 2px 0;
-}
-
-.amazon-style-page .old-price {
-    text-decoration: line-through;
-}
-
-.amazon-style-page .delivery-text {
-    font-size: 12px;
-    color: #565959;
-    margin-bottom: 12px;
-}
-
-.amazon-style-page .btn-affiliate-buy {
-    display: block;
-    width: 100%;
-    background: #ffd814;
-    border: 1px solid #fcd200;
-    border-radius: 20px;
-    padding: 8px 0;
-    text-align: center;
-    color: #0f1111;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.amazon-style-page .btn-affiliate-buy:hover {
-    background: #f7ca00;
-}
-
-/* ---------------------------------------------------------
-   4. MOBILE RESPONSIVENESS (Optional & Recommended)
-   --------------------------------------------------------- */
-@media (max-width: 768px) {
-    #electronics .product-grid {
-        grid-template-columns: 1fr; 
-    }
-    #fashion .product-card {
-        flex: 0 0 75%;              
-    }
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #3a4553;
+  padding: 15px 0;
+  font-size: 0.85rem;
+  color: #999;
 }
