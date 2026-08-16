@@ -461,8 +461,6 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
-    color: #000000;
     font-size: 1.1rem;
     font-weight: 700;
     padding: 14px 32px;
@@ -470,13 +468,15 @@ header {
     text-decoration: none;
     box-shadow: 0 6px 20px rgba(255, 183, 3, 0.35);
     transition: all 0.3s ease;
+    color: #000000;
+    background-color: gold;
 }
 
 .btn-hero:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(255, 183, 3, 0.5);
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
     color: #000000;
-    background-color: gold;
 }
 
 /* Hero Stats Grid */
